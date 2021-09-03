@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Sites from "./Pages/Sites"
+import Carrrousel from "./Pages/Carrousel";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Route exact path="/" component={Sites}/>
+    <Route exact path="/carrousel/:site" component={Carrrousel}/>
+  </Router>,
   document.getElementById('root')
 );
 
